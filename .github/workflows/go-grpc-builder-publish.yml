@@ -7,7 +7,7 @@ on:
       - master
     
     paths: 
-      - go-grpc-builder/**
+      - go-grpc-builder/Dockerfile
       - .github/workflows/go-grpc-builder-publish.yml
 
     # Publish `v1.2.3` tags as releases.
@@ -17,7 +17,7 @@ on:
   # Run tests for any PRs.
   pull_request:
     paths: 
-      - go-grpc-builder/**
+      - go-grpc-builder/Dockerfile
       - .github/workflows/go-grpc-builder-publish.yml
 
 env:
