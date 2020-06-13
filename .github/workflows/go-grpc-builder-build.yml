@@ -1,0 +1,24 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+    paths: 
+      - go-grpc-builder/**
+      - .github/workflows/go-grpc-builder-build.yml
+  pull_request:
+    branches: [ master ]
+    paths:  
+      - go-grpc-builder/**
+      - .github/workflows/go-grpc-builder-build.yml
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build ./go-grpc-builder --file Dockerfile --tag my-image-name:$(date +%s)
