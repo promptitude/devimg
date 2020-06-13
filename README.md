@@ -1,2 +1,2 @@
-# furry-waddle
+# devimg
 docker images for developing
