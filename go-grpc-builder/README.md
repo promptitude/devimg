@@ -6,7 +6,7 @@ base image for building gRPC microservice
 usage
 ------
 
-```docker
+```Dockerfile
 FROM docker.pkg.github.com/promptitude/devimg/go-grpc-builder:latest AS builder
 
 WORKDIR $GOPATH/src/github.com/promptitude/sample-grpc
